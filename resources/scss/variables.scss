@@ -1,0 +1,19 @@
+/** We will set global variables here that user can customize base on their user interface preferences */
+
+:root {
+
+    --aceada-trigger-color: #19274B;
+    --aceada-trigger-icon-color: #1AD2C7;
+
+    // theme colors
+    --aceada-theme-color: #1AD2C7; //for the widget hero
+    --aceada-widgetherotitle-color: #FFFFFF; //widget hero title
+
+    //for future changes
+    --aceada-widget-container-color: #E9F4F4; // whole widget box
+    --aceada-hero-button-color: #13BFB5; // buttons in the widget hero
+
+}
+
+$popup-width: 600px;
+$popup-height: calc(100vh - 170px);

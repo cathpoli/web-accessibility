@@ -1,0 +1,275 @@
+#aceada-color-settings {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+
+    @media screen and (max-width: 540px) {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    /** color adjustments */
+    #aceada-color-adjustments {
+        .aceada-color-picker {
+            border: 0.669643px solid #C2DADA;
+            border-radius: 9.375px;
+            font-size: 10px;
+            line-height: 12px;
+            text-align: center;
+            color: #011817;
+            padding: 10px;
+            margin-top: 5px;
+
+            .aceada-color-picker-header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .aceada-color-picker-reset {
+                    font-size: 8px;
+                }
+            }
+
+            .aceada-adjustment-title {
+                text-align: left !important;
+                margin: 0px !important;
+            }
+
+            .aceada-color-picker-options {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 2px;
+                margin-top: 5px;
+
+                .aceada-color-picker-option-active {
+                    border: 1px solid #000000 !important;
+                }
+
+                button {
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    border: 0px;
+                    cursor: pointer;
+
+                    @media screen and (max-width: 320px) {
+                        height: 20px;
+                        width: 20px;
+                    }
+                    @media screen and (min-width: 321px) and (max-width: 379px) {
+                        height: 25px;
+                        width: 25px;
+                    }
+                    @media screen and (min-width: 380px) and (max-width: 1200px) {
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+
+                .aceada-color-blue-option {
+                    background-color: #0076B4;
+                }
+
+                .aceada-color-purple-option {
+                    background-color: #7A549C;
+                }
+
+                .aceada-color-red-option {
+                    background-color: #C83733;
+                }
+
+                .aceada-color-orange-option {
+                    background-color: #D07021;
+                }
+
+                .aceada-color-teal-option {
+                    background-color: #1AD2C7;
+                }
+
+                .aceada-color-green-option {
+                    background-color: #4D7831;
+                }
+
+                .aceada-color-white-option {
+                    background-color: #ffffff;
+                    border: 1px solid #C2DADA;
+                }
+
+                .aceada-color-black-option {
+                    background-color: #000000;
+                }
+            }
+        }
+    }
+    /** color adjustments */
+
+    #aceada-saturation-adjustments,
+    #aceada-contrast-adjustments {
+        margin-bottom: 16px;
+
+        div {
+            display: flex;
+            flex-direction: row;
+
+            button {
+                flex: 1;
+            }
+
+            #aceada-low-saturation,
+            #aceada-high-contrast {
+                border: 0.669643px solid #C2DADA;
+                border-radius: 9.375px 0px 0px 9.375px;
+            }
+
+            #aceada-high-saturation,
+            #aceada-dark-contrast {
+                border: 0.669643px solid #C2DADA;
+                border-left: 0px;
+                border-radius: 0px 9.375px 9.375px 0px;
+            }
+        }
+    }
+
+    /** contrast adjustments */
+    #aceada-contrast-adjustments {
+
+        #aceada-monochrome {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex: 1;
+            gap: 10px;
+            margin-top: 15px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+    /** contrast adjustments */
+}
+
+@media screen and (min-width: 1008px) {
+    #aceada-color-settings {
+        #aceada-color-adjustments {
+            .aceada-color-picker {
+                border: 1px solid #C2DADA;
+                border-radius: 14px;
+                margin-top: 10px;
+
+                .aceada-color-picker-header {
+
+                    .aceada-color-picker-reset {
+                        font-size: 12px;
+                    }
+                }
+
+                .aceada-color-picker-options {
+                    margin-top: 10px;
+
+                    button {
+                        height: 28px;
+                        width: 28px;
+                    }
+                }
+            }
+        }
+
+        #aceada-saturation-adjustments,
+        #aceada-contrast-adjustments {
+            div {
+                #aceada-low-saturation,
+                #aceada-high-contrast {
+                    border: 1px solid #C2DADA;
+                    border-radius: 14px 0px 0px 14px;
+                }
+
+                #aceada-high-saturation,
+                #aceada-dark-contrast {
+                    border: 1px solid #C2DADA;
+                    border-left: 0px;
+                    border-radius: 0px 14px 14px 0px;
+                }
+            }
+        }
+    }
+}
+
+/** feature: low saturation */
+.aceada-low-saturation > *:not(#aceada, #freshworks-container) {
+    filter: saturate(50%);
+}
+
+/** feature: high saturation */
+.aceada-high-saturation > *:not(#aceada, #freshworks-container) {
+    filter: saturate(200%);
+}
+
+/** workaround to exclude the widget for saturation, :not(#aceada) is not working */
+.aceada-no-filter {
+    filter: none !important;
+}
+
+/** feature: dark contrast */
+.aceada-dark-contrast > *:not(#aceada) *  {
+    color: #fff !important;
+    background-color: #181818 !important;
+}
+
+.aceada-dark-contrast p:not(#aceada *),
+.aceada-dark-contrast a:not(#aceada *),
+.aceada-dark-contrast span:not(#aceada *),
+.aceada-dark-contrast small:not(#aceada *),
+.aceada-dark-contrast h1:not(#aceada *),
+.aceada-dark-contrast h2:not(#aceada *),
+.aceada-dark-contrast h3:not(#aceada *),
+.aceada-dark-contrast h4:not(#aceada *),
+.aceada-dark-contrast h5:not(#aceada *),
+.aceada-dark-contrast h6:not(#aceada *) {
+    color: #50d0a0 !important;
+}
+
+.aceada-dark-contrast button:not(#aceada *),
+.aceada-dark-contrast a:not(#aceada *) {
+    outline: #50d0a0;
+    outline-style: dotted;
+}
+
+/** feature: light contrast */
+.aceada-light-contrast > *:not(#aceada) * {
+    color: #1f2533 !important;
+    background-color: #fff !important;
+}
+
+.aceada-light-contrast p:not(#aceada *),
+.aceada-light-contrast a:not(#aceada *),
+.aceada-light-contrast span:not(#aceada *),
+.aceada-light-contrast small:not(#aceada *),
+.aceada-light-contrast h1:not(#aceada *),
+.aceada-light-contrast h2:not(#aceada *),
+.aceada-light-contrast h3:not(#aceada *),
+.aceada-light-contrast h4:not(#aceada *),
+.aceada-light-contrast h5:not(#aceada *),
+.aceada-light-contrast h6:not(#aceada *) {
+    color: #075f39 !important;
+}
+
+.aceada-light-contrast button:not(#aceada *),
+.aceada-light-contrast a:not(#aceada *) {
+    outline: #075f39;
+    outline-style: dotted;
+}
+
+/** feature: high contrast */
+.aceada-high-contrast > *:not(#aceada) * {
+    filter: contrast(135%);
+    -webkit-filter: contrast(135%);
+    -moz-filter: contrast(135%);
+    -o-filter: contrast(135%);
+}
+
+/** feature: monochrome */
+.aceada-monochrome > div:not(#aceada *) {
+    filter: grayscale(100%) !important;
+}

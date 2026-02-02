@@ -1,0 +1,362 @@
+#aceada-content-adjustments {
+    /** reading orientation */
+    #aceada-reading-orientation {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        //centers the readable font feature on mobile
+        @media screen and (max-width: 768px) {
+            grid-template-columns: auto;
+        }
+
+        button {
+            height: 100px;
+        }
+
+        .aceada-adjustment-button {
+            position: relative;
+
+            .aceada-reading-orientation-selected {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+            }
+        }
+    }
+    /** reading orientation */
+
+    // aceada-image-description
+    //hides the image description feature on mobile
+    @media screen and (max-width: 768px) {
+        #aceada-image-description {
+            display: none;
+        }
+    }    
+    
+    #aceada-text-adjustments {
+        display: grid !important;
+        grid-template-columns: auto !important;
+        gap: 10px;
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: auto auto !important;
+        }
+
+        /** text alignment/highlights */
+        #aceada-alignments-highlights {
+
+            #aceada-alignments,
+            #aceada-highlights {
+                display: flex;
+                margin-bottom: 10px;
+
+                button {
+                    flex: 1;
+                    padding: 10px;
+                }
+            }
+
+            .aceada-text-alignments,
+            .aceada-highlights-button {
+                display: flex;
+                // justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border: 0.619323px solid #C2DADA;
+            }
+
+            #aceada-left-alignment,
+            #aceada-highlight-texts {
+                border-right: 0px;
+                border-radius: 8.67052px 0px 0px 8.67052px;
+            }
+
+            #aceada-right-alignment,
+            #aceada-highlight-links {
+                border-left: 0px;
+                border-radius: 0px 8.67052px 8.67052px 0px;
+            }
+
+            #aceada-center-alignment,
+            #aceada-highlight-titles {
+                border-radius: 0px;
+            }
+
+            img {
+                width: 30px;
+            }
+
+            .aceada-adjustment-title {
+                font-size: 10px;
+                line-height: 12px;
+                text-align: center;
+                color: #011817;
+                margin: 0px;
+                margin-top: 4px;
+            }
+        }
+        /** text alignment/highlights */
+
+        /** text settings */
+        /** Reference: https://www.cssscript.com/range-slider-rolling-counter/ */
+        // #aceada-text-setttings {
+            #aceada-line-height-adjustment,
+            #aceada-content-scaling-adjustment,
+            #aceada-letter-spacing-adjustment,
+            #aceada-font-sizing-adjustment {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 10px;
+
+                .aceada-range-input {
+                    .aceada-group-title {
+                        font-family: 'SF Pro Display Light', sans-serif;
+                        margin-top: 0px;
+                        margin-bottom: 7px
+                    }
+
+                    input {
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        height: auto;
+                    }
+
+                    // FIX: fix for mypaww.com input range mousedown/touchstart event listener
+                    span {
+                        display: none !important;
+                    }
+                }
+
+                .aceada-button-group {
+                    align-self: center;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    font-size: 10px;
+
+                    .aceada-range-value {
+                        display: flex;
+                        justify-content: center;
+                        // height: 100%;
+                        border: 0.619323px solid #C2DADA;
+                        border-radius: 8.67052px 0px 0px 8.67052px;
+                        border-right: 0px;
+                        padding: 0px 5px;
+
+                        span {
+                            align-self: center;
+                            color: #000 !important;
+                        }
+                    }
+
+                    .aceada-range-actions {
+                        display: flex;
+                        flex-direction: column;
+
+                        .aceada-increase-range {
+                            border: 0.619323px solid #C2DADA;
+                            border-radius: 0px 8.67052px 0px 0px;
+                            border-bottom: 0px;
+                            padding: 0px 3px;
+                            cursor: pointer;
+                            width: auto;
+                            margin-bottom: 0px;
+                            background-color: #efefef;
+                            line-height: normal;
+                            height: auto;
+                        }
+
+                        .aceada-decrease-range {
+                            border: 0.619323px solid #C2DADA;
+                            border-radius: 0px 0px 8.67052px 0px;
+                            padding: 0px 3px;
+                            cursor: pointer;
+                            width: auto;
+                            margin-bottom: 0px;
+                            background-color: #efefef;
+                            line-height: normal;
+                            height: auto;
+                        }
+
+                        svg {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+        // }
+        /** text settings */
+    }
+}
+
+@media screen and (min-width: 1008px) {
+    #aceada-content-adjustments {
+        #aceada-reading-orientation {
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        #aceada-text-adjustments {
+            gap: 16px;
+
+            /** text alignment/highlights */
+            #aceada-alignments-highlights {
+
+                #aceada-alignments,
+                #aceada-highlights {
+                    margin-bottom: 16px;
+                }
+
+                .aceada-text-alignments,
+                .aceada-highlights-button {
+                    border: 1px solid #C2DADA;
+                }
+
+                #aceada-left-alignment,
+                #aceada-highlight-texts {
+                    border-radius: 14px 0px 0px 14px;
+                }
+
+                #aceada-right-alignment,
+                #aceada-highlight-links {
+                    border-radius: 0px 14px 14px 0px;
+                }
+            }
+
+            #aceada-text-settings {
+                #aceada-line-height-adjustment {
+                    .aceada-button-group {
+                        .aceada-range-value {
+                            padding: 0px;
+
+                            // span {
+                            //     font-size: 12px;
+                            // }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** feature: reading guide */
+#aceada-reading-guide {
+    display: none;
+
+    //hidden on mobile
+    @media screen and (min-width: 768px) {
+        display: block !important;
+    }
+}
+
+.aceada-reading-guide-element {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: auto;
+    margin: auto;
+    max-width: 500px;
+    width: 90%;
+    height: 13px;
+    border-radius: 50px;
+    pointer-events: none;
+    background-color: #1ad2c7;
+    border: solid 4px #1f2533;
+    z-index: 100000000000000000000;
+}
+
+/** feature: reading mask */
+.aceada-reading-mask {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 0;
+    pointer-events: none;
+    background-color: rgba(0,0,0,.5);
+    z-index: 100000000000000000000;
+}
+
+#aceada-reading-mask-top {
+    top: 0;
+    bottom: auto;
+}
+
+#aceada-reading-mask-bottom {
+    top: auto;
+    bottom: 0;
+}
+
+/** feature: reading font */
+.aceada-readable-font > :not(#aceada) * {
+    font-family: Sans-Serif;
+}
+
+/** feature: text magnifier */
+.aceada-tooltip:hover {
+    position: relative;
+    z-index: 99999 !important;
+}
+
+.aceada-tooltip {
+    // content: attr(aceada-aria-label);
+    padding: 4px 4px;
+    position: fixed;
+    // left: 0;
+    // top: 100%;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 10px 0 -200px -10px;
+    letter-spacing: -0.5px;
+    background: #000102;
+    text-rendering: geometricPrecision;
+    font-size: 36px;
+    color: white;
+    max-width: 700px;
+    opacity: 0.75;
+    display: inline-block;
+    z-index: 99999 !important;
+}
+
+/** feature: text alignment */
+.aceada-align-left > *:not(#aceada) * {
+    text-align: left !important;
+}
+
+.aceada-align-center > *:not(#aceada) * {
+    text-align: center !important;
+}
+
+.aceada-align-right > *:not(#aceada) *  {
+    text-align: right !important;
+}
+
+/** feature: highlights */
+.aceada-highlighted-link:not(#aceada *) {
+    a {
+        border: 2px solid #ffb88a;
+        padding: .3rem;
+    }
+}
+
+.aceada-highlighted-title > :not(#aceada) {
+    h1, h2, h3, h4, h5, h6 {
+        border: 2px solid #ffb88a;
+        padding: .3rem;
+    }
+}
+
+.aceada-highlighted-texts > :not(#aceada) {
+    p {
+        border: 2px solid #ffb88a;
+        padding: .3rem;
+    }
+}

@@ -1,0 +1,847 @@
+#aceada-orientation-adjustments {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+
+    /** media adjustments */
+    #aceada-media-adjustments {
+        display: flex;
+        flex-direction: column;
+
+        #aceada-hide-images {
+            border: 0.669643px solid #C2DADA;
+            border-bottom: 0px;
+            border-radius: 9.375px 9.375px 0px 0px;
+        }
+
+        #aceada-mute-sounds {
+            border-radius: 0px;
+            border: 0.669643px solid #C2DADA;
+            border-bottom: 0px;
+        }
+
+        #aceada-stop-animations {
+            border: 0.669643px solid #C2DADA;
+            border-radius: 0px 0px 9.375px 9.375px;
+        }
+    }
+    /** media adjustments */
+
+    /** cursor adjustments */
+    #aceada-cursor-adjustments {
+        margin-bottom: 16px;
+
+        .aceada-group-title {
+            //title hidden on mobile
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: auto auto;
+
+            /* centers the magnifier when black and white cursor
+            is hidden on mobile */
+            @media screen and (max-width: 768px) {
+                grid-template-columns: auto;
+            }
+
+            #aceada-white-cursor {
+                border: 0.669643px solid #C2DADA;
+                border-radius: 9.375px 0px 0px 9.375px;
+
+                //hidden on mobile
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            #aceada-black-cursor {
+                border: 0.669643px solid #C2DADA;
+                border-left: 0px;
+                border-radius: 0px 9.375px 9.375px 0px;
+                //hidden on mobile
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            #aceada-magnifier {
+                margin-left: 0px;
+                margin-top: 25px;
+
+                /* centers the magnifier when black and white cursor
+                is hidden on mobile */
+                @media screen and (min-width: 769px) {
+                    margin-left: 10px;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+    /** cursor adjustments */
+
+    /** navigation */
+    #aceada-navigation-adjustments {
+        div {
+            display: grid;
+            grid-template-columns: auto auto auto;
+
+            //2x2 grid without the virtual keyboard
+            @media screen and (max-width: 1024px) {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+
+            button {
+                flex: 1;
+            }
+
+            #aceada-keyboard-navigation {
+                border: 0.650139px solid #C2DADA;
+                border-bottom: 0px;
+                border-radius: 9.10194px 0px 0px 0px;
+            }
+
+            #aceada-smart-navigation {
+                border: 0.650139px solid #C2DADA;
+                border-left: 0px;
+                border-bottom: 0px;
+                border-radius: 0px;
+                @media screen and (max-width: 1024px) {
+                    border-radius: 0px 9.10194px 0px 0px;
+                }
+            }
+
+            #aceada-voice-navigation {
+                border: 0.650139px solid #C2DADA;
+                border-left: 0px;
+                border-radius: 0px 9.10194px 0px 0px;
+                @media screen and (max-width: 1024px) {
+                    border-radius: 0px 0px 0px 9.10194px !important;
+                    border-left: 0.650139px solid #C2DADA;
+                }
+            }
+
+            #aceada-virtual-keyboard {
+                border: 0.650139px solid #C2DADA;
+                border-radius: 0px 0px 0px 9.10194px;
+                display: none;
+                @media screen and (min-width: 1025px) {
+                    display: block !important;
+                }
+            }
+
+            #aceada-text-reader {
+                border: 0.650139px solid #C2DADA;
+                border-left: 0px;
+                border-radius: 0px 0px 9.10194px 0px;
+
+            }
+        }
+    }
+    /** navigation */
+}
+
+
+@media screen and (min-width: 1024px) {
+    #aceada-orientation-adjustments {
+        #aceada-media-adjustments {
+            #aceada-hide-images {
+                border: 1px solid #C2DADA;
+                border-bottom: 0px;
+                border-radius: 14px 14px 0px 0px;
+            }
+
+            #aceada-mute-sounds {
+                border: 1px solid #C2DADA;
+                border-bottom: 0px;
+            }
+
+            #aceada-stop-animations {
+                border: 1px solid #C2DADA;
+                border-radius: 0px 0px 14px 14px;
+            }
+        }
+
+        #aceada-cursor-adjustments {
+            div {
+                #aceada-white-cursor {
+                    border: 1px solid #C2DADA;
+                    border-radius: 14px 0px 0px 14px;
+                }
+
+                #aceada-black-cursor {
+                    border: 1px solid #C2DADA;
+                    border-left: 0px;
+                    border-radius: 0px 14px 14px 0px;
+                }
+
+                #aceada-magnifier {
+                    margin-left: 16px;
+                }
+            }
+        }
+
+        #aceada-navigation-adjustments {
+            div {
+                #aceada-keyboard-navigation {
+                    border: 1px solid #C2DADA;
+                    border-bottom: 0px;
+                    border-right: 0px;
+                }
+
+                #aceada-smart-navigation {
+                    border: 1px solid #C2DADA;
+                    border-bottom: 0px;
+                    border-right: 0px;
+                }
+
+                #aceada-voice-navigation {
+                    border: 1px solid #C2DADA;
+                }
+
+                #aceada-virtual-keyboard {
+                    border: 1px solid #C2DADA;
+                    border-right: 0px;
+                }
+
+                #aceada-text-reader {
+                    border: 1px solid #C2DADA;
+                }
+
+                .aceada-navigation-adjustments-top-left {
+                    border-top-left-radius: 14px !important;
+                }
+
+                .aceada-navigation-adjustments-top-right {
+                    border-top-right-radius: 14px !important;
+                }
+
+                .aceada-navigation-adjustments-bottom-left {
+                    border-bottom-left-radius: 14px !important;
+                }
+
+                .aceada-navigation-adjustments-bottom-right {
+                    border-bottom-right-radius: 14px !important;
+                }
+            }
+        }
+    }
+}
+
+/** feature: hide image */
+.aceada-hide-image {
+    img:not(#aceada *) {
+        visibility: hidden;
+    }
+}
+
+/** feature: stop animation */
+.aceada-stop-animations > *:not(#aceada) * {
+    transition: none !important;
+    animation-fill-mode: forwards !important;
+    animation-iteration-count: 1 !important;
+    animation-duration: .01s !important;
+}
+
+/** feature: big white cursor */
+.aceada-white-cursor {
+    cursor: url('$images/white-cursor.svg'), default !important;
+    a, button {
+        cursor: url('$images/white-pointer.svg') 13 5, default !important;
+    }
+}
+
+/** feature: big black cursor */
+.aceada-black-cursor {
+    cursor: url('$images/black-cursor.svg'), default !important;
+    a, button {
+        cursor: url('$images/black-pointer.svg') 13 5, default !important;
+    }
+}
+
+/** feature: image magnifier */
+.aceada-image-magnifier > *:not(#aceada) {
+    zoom: 130% !important;
+}
+
+/** feature: keyboard navigation */
+.aceada-keyboard-navigation {
+    border: 2px dashed #f10000;
+}
+
+
+/** feature: smart navigation */
+#aceada-smart-navigation-help-pop-up {
+    position: fixed;
+    top: 0;
+    left: 1%;
+    z-index: 98;
+    max-width: 20rem;
+    font-size: 13px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid #1ad2c7;
+    display: none;
+    cursor: move;
+    justify-content: center;
+}
+
+#aceada-smart-navigation-screen {
+    width: 100%;
+    // height: 100%;
+    z-index: 10000;
+    font-size: 100px;
+    padding: 10px;
+    // background-color: #1ad2c7;
+    display: none;
+    justify-content: center;
+    opacity: 0.5;
+    color: #1ad2c7;
+    font-weight: 1000;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: fixed;
+    .center {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+    }
+}
+
+.aceada-smart-navigation-number {
+    z-index: 99;
+    padding: 10px;
+    background-color: #1ad2c7;
+    border: 2px solid rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-weight: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+/** feature: voice command */
+#aceada-voice-command-pop-up {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    z-index: 99;
+    width: 360px !important;
+    font-family: "SF Pro Display Light", sans-serif;
+    font-size: 13px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #1ad2c7;
+    transition: bottom 0.3s ease-in-out;
+    display: none;
+
+    @media screen and (max-width: 1440px) {
+        width: 260px !important;
+        padding: 10px 10px 10px 0px;
+    }
+
+    .aceada-voice-command-pop-up-icons {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+
+        div {
+            // margin-right: 1rem;
+            // float: center;
+        }
+    }
+
+    #aceada-voice-command-pop-up-minimize {
+        display: relative;
+        cursor: pointer;
+        margin: 0;
+        float: right;
+        height: 30px;
+        width: 34px;
+        padding: 0 0 5px 0;
+        background-color: #1ad2c7;
+        text-align: center;
+        font-weight: bold;
+        font-size: 11px;
+        color: white;
+        border-radius: 3px;
+        z-index: 100000000000000000;
+        margin-top: -12px;
+        // margin-left: -1rem;
+        margin-right: -12px;
+    }
+
+    #aceada-voice-command-pop-up-minimize:hover {
+        background-color: #10a198;;
+    }
+
+    #aceada-voice-command-mic {
+        width: 15%;
+        position: relative;
+        left: 7px;
+        margin: auto;
+        @media screen and (max-width: 1440px) {
+            left: 12px !important;
+        }
+    }
+
+    #aceada-voice-command-message {
+        width: 65%;
+        background-color: #1ad2c7;
+        padding: 16px;
+        border-radius: 1rem;
+        color: white;
+        font-weight: 700;
+        position: relative;
+        margin: auto;
+
+        @media screen and (max-width: 1440px) {
+            width: 50% !important;
+            padding: 10px 5px !important;
+            margin: 0px 20px;
+        }
+    }
+
+    #aceada-voice-command-info {
+        svg {
+            margin-top: 4px;
+            float: right;
+            position: relative;
+            left: 7px;
+
+            @media screen and (max-width: 1024px) {
+                position: relative;
+                left: 10px;
+            }
+        }
+        position: relative;
+        right: 15px;
+        width: 15%;
+        margin: auto;
+
+        @media screen and (max-width: 1024px) {
+            right: 22px;
+        }
+    }
+
+    #aceada-voice-command-unmuted {
+        display: none;
+        .aceada-seizures-profile {
+            position: relative;
+            right: 12px;
+        }
+    }
+}
+
+#aceada-voice-command-info-pop-up {
+    position: fixed;
+    bottom: 175px;
+    left: 20px;
+    z-index: 99;
+    width: 360px;
+    font-family: "SF Pro Display Light", sans-serif;
+    font-size: 13px;
+    padding: 5px;
+    // margin: 200px 120px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #1ad2c7;
+    display: none;
+
+    #aceada-voice-command-general-tab,
+    #aceada-voice-command-accessibility-tab,
+    #aceada-voice-command-basic-tab {
+        width: 30%;
+
+        @media screen and (max-width: 1440px) {
+            width: 100%;
+            padding: 5px;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        width: 260px;
+    }
+
+    #aceada-voice-command-pop-up-minimize {
+        display: relative;
+        cursor: pointer;
+        margin: 0;
+        float: right;
+        height: 30px;
+        width: 34px;
+        padding: 0 0 5px 0;
+        background-color: #1ad2c7;
+        text-align: center;
+        font-weight: bold;
+        font-size: 11px;
+        color: white;
+        border-radius: 3px;
+        z-index: 100000000000000000;
+        margin-top: -8px;
+        margin-right: -6px;
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    .active {
+        background-color: #1ad2c7;
+        color: white;
+        font-weight: 700;
+    }
+
+    .aceada-voice-command-pop-up-tabs {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+
+
+        @media screen and (max-width: 1440px) {
+            flex-direction: column;
+
+            .aceada-seizures-profile {
+                font-size: 14px !important;
+            }
+        }
+
+        div {
+            border: 1px solid #1ad2c7;
+            padding: 5px;
+
+            @media screen and (max-width: 768px) {
+                padding: 0px;
+            }
+        }
+
+        div:hover {
+            background-color: #1ad2c7;
+            color: white;
+            font-weight: 700;
+        }
+    }
+
+    .aceada-voice-command-legend {
+        margin-top: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+
+        #aceada-voice-command-general-info,
+        #aceada-voice-command-accessibility-info,
+        #aceada-voice-command-basic-info
+        {
+            display: none;
+            height:200px;
+            overflow:auto;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #E9F4F4;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #1AD2C7;
+                border-radius: 20px;
+                border: 3px solid #E9F4F4;
+            }
+        }
+
+        table {
+            width: 100%;
+            text-align: left;
+            font-size: 14px;
+            overflow: auto;
+        }
+
+        .aceada-legend-command {
+            width: 25%;
+            padding: 8px;
+            border-bottom: 1px solid #9ca3af;
+        }
+
+        .aceada-legend-explanation {
+            width: 75%;
+            padding: 8px;
+            border-bottom: 1px solid #9ca3af;
+        }
+    }
+}
+
+/** feature: text reader */
+#aceada-text-reader-pop-up {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    z-index: 99;
+    width: 360px !important;
+    height: 65px!important;
+    font-family: 'SF Pro Display Light', sans-serif;
+    font-size: 13px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid #1ad2c7;
+    display: none;
+
+    @media screen and (max-width: 1440px) {
+        width: 260px !important;
+        padding: 10px;
+    }
+
+    .aceada-text-reader-pop-up-icons {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        svg {
+            fill: #000000;
+        }
+
+        div {
+            margin-right: 16px;
+            cursor: pointer;
+
+            @media screen and (max-width: 1440px) {
+                margin-right: 0px;
+                position: relative;
+                right: 8px;
+            }
+        }
+
+        div:hover {
+            color: #1ad2c7;
+        }
+
+        .active {
+            color: #1ad2c7;
+        }
+    }
+
+    #aceada-text-reader-pop-up-minimize {
+        display: relative;
+        cursor: pointer;
+        margin: 0;
+        float: right;
+        height: 30px;
+        width: 34px;
+        padding: 0 0 5px 0;
+        background-color: #1ad2c7;
+        text-align: center;
+        font-weight: bold;
+        font-size: 11px;
+        color: white;
+        border-radius: 3px;
+        z-index: 100000000000000000;
+        margin-top: -12px;
+        margin-right: -12px;
+    }
+
+    #aceada-text-reader-pop-up-minimize:hover {
+        background-color: #10a198;
+    }
+
+    #aceada-text-reader-muted {
+        display: none;
+    }
+
+    #aceada-text-reader-pause-icon {
+        display: none;
+    }
+}
+
+.aceada-text-reader {
+    border: 1px dashed #c2c2c2;
+}
+
+/** feature: virual keyboard */
+.aceada-keyboard {
+    position: fixed;
+    left: 32%;
+    bottom: 0em;
+    padding: 5px 0;
+    background: #ffffff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+    width: 40%;
+    border: 3px solid #1ad2c7;
+    z-index: 9999999 !important;
+
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+
+    .aceada-keyboard-close {
+        display: relative;
+        cursor: pointer;
+        margin: 0;
+        float: right;
+        height: 30px;
+        width: 34px;
+        padding: 0 0 5px 0;
+        background-color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+        font-size: 11px;
+        color: #ffffff;
+        border-radius: 3px;
+        z-index: 100000000000000000 !important;
+        background-color: #1ad2c7;
+        margin: -8px 0px 0px 0px;
+    }
+
+    .aceada-keyboard-close:hover {
+        background-color: #10a198;
+        color: white;
+    }
+}
+
+.aceada-keyboard--hidden {
+    bottom: -100%;
+}
+
+.aceada-keyboard__keys {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    z-index: 100000000000000000 !important;
+}
+
+.aceada-keyboard__header {
+    height: 20px;
+    text-align: center;
+}
+
+.aceada-keyboard__key {
+    height: 45px;
+    width: 7%;
+    max-width: 70px;
+    margin: 3px;
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+    font-size: 1.05em;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    background: #1ad2c7;
+    z-index: 100000000000000000 !important;
+}
+
+.aceada-keyboard__key:active {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.aceada-keyboard__key--wide {
+    width: 9%;
+}
+
+.aceada-keyboard__key--extra-wide {
+    width: 36%;
+    max-width: 500px;
+}
+
+.aceada-keyboard__key--activatable::after {
+    content: '';
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.aceada-keyboard__key--active::after {
+    background: #0cf304;
+}
+
+.aceada-keyboard__key:hover {
+    background-color: #10a198;
+    color: white;
+}
+
+.aceada-keyboard__key--dark {
+    background: #10a198;
+}
+
+#aceada-virtual-keyboard-pop-up {
+    position: fixed;
+    bottom: 0rem;
+    right: 0rem;
+    z-index: 99;
+    width: 11em !important;
+    height: 3.3em !important;
+    // width: 15%;
+    // height: 4rem;
+    font-family: 'SF Pro Display Light', sans-serif;
+    font-size: 13px;
+    padding: 10px;
+    margin: 20px 120px;
+    background-color: #ffffff;
+    border: 3px solid #ffffff;
+    align-items: center;
+    justify-content: center;
+    color: #1ad2c7;
+    font-size: 20px;
+    font-weight: 700;
+    display: none;
+    border: 3px solid #1ad2c7;
+
+    @media screen and (max-width: 1024px) {
+        display:none !important;
+        position: fixed;
+        bottom: 0rem;
+        right: 0rem;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .column {
+        margin: 3px;
+    }
+
+    button {
+        background-color: white;
+        border: none;
+    }
+
+    .aceada-adjustment-icon {
+        svg {
+            fill: #ffffff;
+        }
+
+        .aceada-adjustment-title {
+            color: #1AD2C7;
+        }
+    }
+}
